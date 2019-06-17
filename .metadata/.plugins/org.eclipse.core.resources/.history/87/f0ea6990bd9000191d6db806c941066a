@@ -1,0 +1,8 @@
+package guestbook.service;
+
+public class MessageNotFoundException {
+
+	public MessageNotFoundException(String message){
+		super(message);
+	}
+}

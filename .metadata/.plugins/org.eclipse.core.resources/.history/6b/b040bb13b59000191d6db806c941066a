@@ -1,0 +1,30 @@
+package guestbook.service;
+
+import java.util.List;
+
+import guestbook.model.Message;
+
+
+
+
+
+public class MessageListView {
+
+	private int messageTotalCount;
+	private int currentPageNumber;
+	private List<Message> messageList;
+	private int pageTotalCount;
+	private int messageCountPerPage;
+	private int firstRow;
+	private int endRow;
+	
+	public MessageListView(List<Message> messageList, int messageTatalCount,
+			int currentPageNumber, int messageCountPerPage, int startRow, int endRow){
+		this.messageList = messageList;
+		this.messageTotalCount = messageTatalCount;
+		this.currentPageNumber = currentPageNumber;
+		this.messageCountPerPage = messageCountPerPage;
+		this.firstRow = firstRow;
+		this.endRow = endRow;
+	}
+}

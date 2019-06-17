@@ -1,0 +1,33 @@
+package guestbook.service;
+
+import java.sql.Connection;
+
+import guestbook.dao.MessageDao;
+import jdbcUtil.connection.ConnectionProvider;
+
+public class GetMessageListService {
+
+	private static GetMessageListService instance = new GetMessageListService();
+	
+	public static GetMessageListService getInstance(){
+		return instance;
+	}
+	
+	private GetMessageListService(){}
+	
+	private static final int MESSAGE_COUNT_PER_PAGE = 3;
+	
+	public MessageListView getMessageList(int pageNumber){
+		Connection conn = null;
+		int curretPageNumber = pageNumber;
+		
+		try{
+			conn = ConnectionProvider.getConnection();
+			MessageDao messageDao = MessageDao.getInstance();
+			
+			int messageTotalCount = messageDao.selectCount(conn);
+			
+			List<Me>
+		}
+	}
+}

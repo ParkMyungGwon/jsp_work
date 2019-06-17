@@ -1,0 +1,14 @@
+package jdbcUtil;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+public class DBCPlnit extends HttpServlet {
+
+	@Override
+	public void init() throws ServletException{
+		loadJDBCDriver();
+		initConnectionPool();
+	}
+	
+}
