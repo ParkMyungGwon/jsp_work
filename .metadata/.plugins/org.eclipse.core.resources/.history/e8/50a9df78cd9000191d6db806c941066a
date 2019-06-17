@@ -103,7 +103,7 @@ public class MessageDao {
 		try{
 			
 			pstmt = conn.prepareStatement(
-				"select * from guestbook_message " + "order by message_id desc limit ?,?");
+				"select * from guestbook_message" + "order by message_id desc limit ?,?");
 			pstmt.setInt(1, firstRow - 1);
 			pstmt.setInt(2, endRow - firstRow + 1);
 			
